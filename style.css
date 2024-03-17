@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.658);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+main {
+  background-color: rgb(25, 112, 69);
+  width: 375px;
+  height: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  transform: skewy(5deg);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.116);
+  transition: 1s ease;
+  scale: 2;
+}
+
+main div {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(121, 223, 143);
+  font-size: 2em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+div#hora::after {
+  content: "HORA";
+  font-size: 55%;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+div#minuto::after {
+  content: "MINUTO";
+  font-size: 55%;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+div#segundo::after {
+  content: "SEGUNDO";
+  font-size: 55%;
+  font-family: sans-serif;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 770px) {
+  main {
+    scale: 1.5;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  main {
+    scale: 1.2;
+  }
+@media screen and (max-width: 470px) {
+  main {
+    scale: 1.1;
+  }
+}
+@media screen and (max-width: 469px) {
+  main {
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+    scale: 1;
+  }
+  main div {
+    scale: 1.2;
+  }
+}
+}
